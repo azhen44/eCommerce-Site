@@ -1,0 +1,40 @@
+<section>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th colspan="2"> Product </th>
+        <th> Unit Price </th>
+        <th> Quantity </th>
+        <th> Price </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% find_product(line_item.product_id).each do |item|%>
+        <tr>
+          <td>
+            <%= image_tag item.image.tiny.url%>
+          </td>
+            <td>
+            <h4> <%=item.name%> </h4>
+            <br>
+         
+            <%= item.description%>
+          </td>
+            <td>
+            <%= humanized_money_with_symbol item.price%>
+          </td>
+            <td>
+            <%= line_item.quantity%>
+          </td>
+            <td>
+            <%= humanized_money_with_symbol item.price * line_item.quantity%>
+          </td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+<section>
+
+
+
+</section>
