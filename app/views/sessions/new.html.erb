@@ -1,0 +1,18 @@
+<div class="login-container text-c animated flipInX">
+  <div><h1 class="logo-badge text-whitesmoke"><span class="fa fa-user-circle"></span></h1></div>
+  <h2 class="text-whitesmoke">Sign in to Jungle!</h2>
+  <p class="text-whitesmoke">Please enter your login and password.</p>
+  <div class="container-content">
+    <%= form_tag '/login' do %>
+      <div class="form-group">  
+        <%=text_field_tag :email, nil, placeholder: 'username',class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= password_field_tag :password, nil, placeholder: 'password', class: "form-control"%>
+      </div>
+      <%= submit_tag "Submit", class: "form-button button-l margin-b"%>
+    <% end %>
+  <a class="text-darkyellow" href="#"><small>Forgot your password?</small></a>
+  <p class="text-whitesmoke text-center"><small>Do not have an account?</small></p>
+  <a class="text-darkyellow" href="/signup"><small>Sign Up</small></a>
+</div>
