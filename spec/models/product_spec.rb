@@ -18,7 +18,6 @@ RSpec.describe Product, type: :model do
     it "is not valid without a price" do
       category = Category.new(name: "Green")
       product = Product.create(name: "noprice", quantity: 5, price: "", category: category  )
-      puts product.inspect
       expect(product.errors.full_messages).to_not be_empty
     end
     it "is not valid without a category" do
