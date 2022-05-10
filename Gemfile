@@ -56,7 +56,10 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'dotenv-rails'
   gem "cypress-rails"
-  gem 'rspec-rails'
+  # gem 'rspec-rails'
+  gem 'database_cleaner-active_record'
+  gem 'rspec-rails', '~> 5.1'
+  gem 'net-smtp', require: false
 end
 
 group :development do
@@ -84,5 +87,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :test do
   # gem "cypress-rails"
-  gem 'database_cleaner-active_record'
+  #gem 'database_cleaner-active_record'
 end
